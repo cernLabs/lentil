@@ -5,14 +5,14 @@ read var_input
 # build append function
 function append_line() {
 	local var=$1
-	echo "$var" >> things_to_do_after_before_MS.csv
+	echo "$var" >> things_to_do_after_during_MS.csv
 	echo "row appended"
 }
 
 # sync to github
 function ghsync() {
-	git add things_to_do_after_before_MS.csv >/dev/null 2>&1
-	git commit -m "appended row to things_to_do_after_before_MS.csv" >/dev/null 2>&1
+	git add things_to_do_after_before_MS.csv
+	git commit -m "appended row to things_to_do_after_during_MS.csv" >/dev/null 2>&1
 	git push >/dev/null 2>&1
 	echo "synced to github"
 }
