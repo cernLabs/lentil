@@ -11,9 +11,9 @@ function append_line() {
 
 # sync to github
 function ghsync() {
-	git add things_to_do_after_before_MS.csv
-	git commit -m "appended row to things_to_do_after_before_MS.csv"
-	git push >/dev/null
+	git add things_to_do_after_before_MS.csv >/dev/null 2>&1
+	git commit -m "appended row to things_to_do_after_before_MS.csv" >/dev/null 2>&1
+	git push >/dev/null 2>&1
 	echo "synced to github"
 }
 
